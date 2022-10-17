@@ -24,7 +24,9 @@ export class IndexComponent implements OnInit {
   deletePerson(id: number){
     this.personService.delete(id).subscribe(res => {
       console.log('Persona eliminada correctamente');
+      window.location.reload();
     })
+    
   }
 
 }
